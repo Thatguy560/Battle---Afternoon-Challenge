@@ -1,19 +1,13 @@
 feature 'Enter names' do
   scenario 'submitting names' do
-    visit('/')
-    fill_in :player_1_name, with: 'Peter'
-    fill_in :player_2_name, with: 'Shrek'
-    click_button 'Submit'
+    sign_in_and_play
     expect(page).to have_content 'Peter vs. Shrek'
   end
 end
 
 feature "hit points" do 
   scenario 'Player 2s hit points' do
-    visit('/')
-    fill_in :player_1_name, with: 'Peter'
-    fill_in :player_2_name, with: 'Shrek'
-    click_button 'Submit'
+    sign_in_and_play
     expect(page).to have_content '100'
   end
 end
