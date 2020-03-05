@@ -3,11 +3,14 @@ require 'sinatra/base'
 
 # Our class Battle inherits it's properites from "Sinatra::Base"
 class Battle < Sinatra::Base
-get '/' do
+get '/' do # Web page file path is just get "/" as we're 
+  # requiring data back from the server.
   erb :index
 end
 
-post '/names' do
+post '/names' do # When we fill in the battle info
+  # the returned web page has the file path post "/names"
+  # Sending data to the server
   @player_1_name = params[:player_1_name]
   @player_2_name = params[:player_2_name]
   erb :play
