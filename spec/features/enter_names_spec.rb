@@ -12,6 +12,13 @@ feature "hit points" do
   end
 end
 
+feature "attacking" do
+  scenario 'attacking player 2' do
+    sign_in_and_play
+    click_link 'Attack Shrek'
+    expect(page).to have_content 'You have Attacked Shrek!'
+  end
+end
 
 # As two Players,
 # So we can play a personalised game of Battle,

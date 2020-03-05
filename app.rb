@@ -28,6 +28,12 @@ get '/play' do
   erb :play
 end
 
+get '/attack' do
+  @player_1_name = session[:player_1_name]
+  @player_2_name = session[:player_2_name]
+  erb :attack
+end
+
 # We're now setting the information we've passed in sessions equal to these instance variables,
 # which we can now call in our play.erb file.
 
