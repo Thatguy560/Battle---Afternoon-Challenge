@@ -1,4 +1,5 @@
 # Our app.rb is our Controller file.
+require './lib/game.rb'
 require 'sinatra/base'
 require './lib/player.rb' # We now need to require the player.rb file because in our ./names
 # file path we are setting global variables equal to new instances of the player.class
@@ -33,7 +34,7 @@ end
 get '/attack' do
   @player_1 = $player_1
   @player_2 = $player_2
-  @player_1.attack(@player_2)
+  Game.new.attack(@player_2)
   erb :attack
 end
 
@@ -41,3 +42,8 @@ end
 # which we can now call in our play.erb file.
 run! if app_file == $0
 end
+
+# Controllers can instantiate only one object. Therefore, views
+# can only know about one instance variable and views should
+# only send messages to that object. In this case a new instance
+# of player.

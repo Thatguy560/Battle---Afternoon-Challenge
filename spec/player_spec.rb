@@ -1,7 +1,7 @@
 require 'player.rb'
 describe Player do
-  subject(:dave) { Player.new('Dave') }
-  subject(:mittens) { Player.new('Mittens') }
+  subject(:dave) { Player.new('Dave') } # described_class.new
+  subject(:mittens) { Player.new('Mittens') } # described_class.new
 
   describe '#name' do
     it 'returns the name' do
@@ -15,12 +15,12 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'damages the player' do
-      expect(mittens).to receive(:receive_damage)
-      dave.attack(mittens)
-    end
-  end
+  # describe '#attack' do
+  #   it 'damages the player' do
+  #     expect(mittens).to receive(:receive_damage)
+  #     dave.attack(mittens)
+  #   end
+  # end
 
   describe '#receive_damage' do
     it 'reduces the player hit points' do
