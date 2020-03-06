@@ -1,0 +1,35 @@
+body {
+  background-image: url("https://wallpaperaccess.com/full/559806.jpg");
+}
+
+h1 { 
+text-align: center;
+color: mintcream;
+}
+
+h2 { 
+  text-align: center;
+  color: mintcream;
+}
+
+form { 
+text-align: center;
+color: black;
+}
+
+label {
+color: mintcream;
+}
+
+.player1 { 
+  color: black;
+}
+
+.play {
+  /* background-image: url("https://en.wikipedia.org/wiki/Battle_of_Aughrim#/media/File:John_Mulvany_-_The_Battle_of_Aughrim.jpg"); */
+}
+
+.attack_page {
+  background-color: green;
+}
+

@@ -1,6 +1,16 @@
-<%= @player_1_name %> vs. <%= @player_2_name %>
+<!DOCTYPE html>
+<html>
+<body class= "play">
+<link rel='stylesheet' href='styles.css'>
 
- <p><%= @player_1_name %> 100 hit points </p>
- <p><%= @player_2_name %> 100 hit points </p>
+<h1><%= @player_1.name %> vs. <%= @player_2.name %></h1>
 
- <a href='/attack'> Attack <%= @player_2_name %></a>
+<h1><%= @player_2.name %>: <%= @player_2.hit_points %>HP</h1>
+
+<h2><p><%= @player_1.name %> 100 hit points </p></h2>
+<h2><p><%= @player_2.name %> 100 hit points </p></h2>
+
+<h1><a href='/attack'> Attack <%= @player_2.name %></a></h1>
+
+</body>
+<html>

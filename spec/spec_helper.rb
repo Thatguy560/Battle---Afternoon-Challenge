@@ -105,6 +105,10 @@ ENV['RACK_ENV'] = 'test'
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 require File.join(File.dirname(__FILE__), './features', 'web_helpers.rb')
 
+# We're requiring the web_helpers.rb inside our spec helper by
+# by specifying the file path './features' and then
+# referencing the web_helpers.rb
+
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
